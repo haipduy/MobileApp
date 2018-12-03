@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-Apr-2018, 17:04:00
+    Author     : PDH
+*/
+#product{
+    border: 1px solid #f5f5f5;
+}
+.img-phone img{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    height: auto;
+}
+
+#product button{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+#but1{
+    margin-left: 10%; 
+}
+#product:hover .nameitem{
+    color: red;
+}
+#product p{
+    margin-left: 10%;
+}
+#title{
+    font-size: 11px;
+}
+#price{
+    font-weight: bold;
+    font-size: 16px;
+    color: red;
+}
+#price-km{
+    font-size: 13px
+}
+#view{
+    color: white;
+    text-decoration: none;
+    background-color: #17a2b8;
+    padding: 9px 33px 8px 33px;
+    margin-left: 2%;
+    border-radius: 7%;
+}
+#view:hover{
+    /*color: #17a2b8;*/
+    
+}
+
+#search{
+    font-size: 20px;
+    width: 30%;
+    margin-left: 30%;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+

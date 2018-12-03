@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21-Apr-2018, 08:43:23
+    Author     : PDH
+*/
+#image-detal{
+    width:80%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 10px;
+
+}
+#imagegif{
+    width: 100%;
+   height: auto;
+}
+#table1{
+    font-size: 15px;
+}
+#pricesalse{
+    font-size: 40px;
+    color: red;
+    margin-left: 10px;
+}
+#titlte{
+    padding-bottom: 10px;
+}
+.TITLE{
+    color: blue;
+    font-size: 25px;
+}
+

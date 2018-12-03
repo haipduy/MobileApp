@@ -1,0 +1,104 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="">
+            <result>login.html</result>
+        </action>
+        <action name="login" class="haipd.actions.LoginAction">
+            <result name="admin">admin.jsp</result>
+            <result name="user">user.jsp</result>
+            <result name="invalid">login.jsp</result>
+        </action>
+        <action name="logout">
+            <result name="success" type="redirect">login.html</result>
+        </action>
+        <action name="managerUser" class="haipd.actions.ManagerUserAction">
+            <result name="success">managerUser.jsp</result>
+        </action>
+        <action name="managerProduct" class="haipd.actions.ManagerProductAction">
+            <result name="success">managerProduct.jsp</result>
+        </action>
+        <action name="detailProductManager" class="haipd.actions.DetailProductManagerAction">
+            <result name="success">detailProduct.jsp</result>
+        </action>
+        <action name="managerOrder" class="haipd.actions.ManagerOrderAction">
+            <result name="success">managerOrder.jsp</result>
+        </action>
+        <action name="updateStatus" class="haipd.actions.UpdateStatusAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">managerOrder</param>
+            </result>
+        </action>
+        <action name="detailOrder" class="haipd.actions.DetailOrderAction">
+            <result name="success">detailOrder.jsp</result>
+        </action>
+        <action name="deleteRecordProduct" class="haipd.actions.DeleteRecordProductAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">managerProduct</param>
+            </result>
+        </action>
+        <action name="deleteRecordUser" class="haipd.actions.DeleteRecordUserAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">managerUser</param>
+            </result>
+        </action>
+        <action name="createNewUser" class="haipd.actions.CreateNewUserAction">
+            <result name="success">login.html</result>
+            <result name="fail">createNewUser.jsp</result>
+        </action>
+        <action name="getCategory" class="haipd.actions.GetCategoryAction">
+            <result name="success">newItem.jsp</result>
+        </action>
+        <action name="newItem" class="haipd.actions.NewItemAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">managerProduct</param>
+            </result>
+            <result name="fail" type="redirectAction">
+                <param name="actionName">getCategory</param>
+            </result>
+        </action>
+        <!--user-->
+        <action name="showAllProduct" class="users.actions.ShowAllProductAction">
+            <result name="success">viewAllProduct.jsp</result>
+        </action>
+        
+        <!--view Detail-->
+        <action name="viewDetailProduct" class="users.actions.ViewDetailProductAction">
+            <result name="success">viewDetailProduct.jsp</result>
+        </action>
+        <!--cart-->
+        <action name="addToCartUser" class="users.actions.AddToCartUserAction">
+            <result name="success" type="redirectAction">showAllProduct</result>
+        </action>
+        <action name="viewCart">
+            <result>viewCart.jsp</result>
+        </action>
+        <action name="removeCart" class="users.actions.RemoveCartAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">viewCart</param>
+            </result>
+        </action>
+        <action name="updateCart" class="users.actions.UpdateCartAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">viewCart</param>
+            </result>
+            <result name="fail" type="redirect">errorUpdateCart.html</result>
+        </action>
+        <!--serch-->
+        <action name="searchProduct" class="users.actions.SearchProductAction">
+            <result name="success">search.jsp</result>
+        </action>
+        <!-- dathang -->
+        <action name="submitDonHang" class="users.actions.SubmitDonHangAction">
+            <result name="success">user.jsp</result>
+            <result name="fail" type="redirect">dathang.jsp</result>
+        </action>
+
+        
+        
+    </package>
+</struts>
